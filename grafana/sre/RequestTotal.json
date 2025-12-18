@@ -34,41 +34,7 @@
         "fieldConfig": {
           "defaults": {
             "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
+              "mode": "thresholds"
             },
             "mappings": [],
             "thresholds": {
@@ -88,24 +54,90 @@
           "overrides": []
         },
         "gridPos": {
-          "h": 7,
-          "w": 24,
+          "h": 5,
+          "w": 3,
           "x": 0,
           "y": 0
         },
+        "id": 2,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "12.2.0",
+        "targets": [
+          {
+            "editorMode": "builder",
+            "expr": "prometheus_ready",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "Ready",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 24,
+          "x": 0,
+          "y": 5
+        },
         "id": 1,
         "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
+          "colorMode": "background",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
           },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          }
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
         },
         "pluginVersion": "12.2.0",
         "targets": [
@@ -121,8 +153,8 @@
             "refId": "A"
           }
         ],
-        "title": "New panel",
-        "type": "timeseries"
+        "title": "Request Total",
+        "type": "stat"
       }
     ],
     "preload": false,
@@ -132,7 +164,7 @@
       "list": []
     },
     "time": {
-      "from": "now-6h",
+      "from": "now-5m",
       "to": "now"
     },
     "timepicker": {},
