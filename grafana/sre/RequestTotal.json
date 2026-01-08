@@ -215,7 +215,7 @@
             "refId": "A"
           }
         ],
-        "title": "Process CPU Sec total",
+        "title": "Process CPU Sec ",
         "type": "stat"
       },
       {
