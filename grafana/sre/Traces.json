@@ -32,6 +32,67 @@
           "uid": "P214B5B846CF3925F"
         },
         "fieldConfig": {
+          "defaults": {},
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 16,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 3,
+        "options": {
+          "spanFilters": {
+            "criticalPathOnly": false,
+            "matchesOnly": false,
+            "serviceNameOperator": "=",
+            "spanNameOperator": "="
+          }
+        },
+        "pluginVersion": "12.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "tempo",
+              "uid": "P214B5B846CF3925F"
+            },
+            "filters": [
+              {
+                "id": "c5b59c1f",
+                "operator": "=",
+                "scope": "span"
+              },
+              {
+                "id": "service-name",
+                "isCustomValue": false,
+                "operator": "=",
+                "scope": "resource",
+                "tag": "service.name",
+                "value": [
+                  "otel-microservice-beyla"
+                ],
+                "valueType": "string"
+              }
+            ],
+            "limit": 20,
+            "metricsQueryType": "range",
+            "query": "1952f56a6c3c21efbdfc3d8a3d872d5",
+            "queryType": "traceql",
+            "refId": "traceId",
+            "serviceMapUseNativeHistograms": true,
+            "tableType": "traces"
+          }
+        ],
+        "title": "New Panel",
+        "type": "traces"
+      },
+      {
+        "datasource": {
+          "type": "tempo",
+          "uid": "P214B5B846CF3925F"
+        },
+        "fieldConfig": {
           "defaults": {
             "custom": {
               "align": "auto",
@@ -64,7 +125,7 @@
           "h": 8,
           "w": 14,
           "x": 0,
-          "y": 0
+          "y": 16
         },
         "id": 1,
         "options": {
@@ -146,7 +207,7 @@
           "h": 8,
           "w": 14,
           "x": 0,
-          "y": 8
+          "y": 24
         },
         "id": 2,
         "options": {
@@ -198,7 +259,7 @@
       "list": []
     },
     "time": {
-      "from": "now-6h",
+      "from": "now-30m",
       "to": "now"
     },
     "timepicker": {},
