@@ -47,7 +47,13 @@
             "criticalPathOnly": false,
             "matchesOnly": false,
             "serviceNameOperator": "=",
-            "spanNameOperator": "="
+            "spanNameOperator": "=",
+            "tags": [
+              {
+                "id": "caec1f25-8c1",
+                "operator": "="
+              }
+            ]
           }
         },
         "pluginVersion": "12.2.0",
@@ -57,12 +63,16 @@
               "type": "tempo",
               "uid": "P214B5B846CF3925F"
             },
+            "limit": 20,
+            "metricsQueryType": "range",
             "query": "bbd762694342c411fe8b2f9d5cf84e61",
             "queryType": "traceql",
-            "refId": "A"
+            "refId": "A",
+            "serviceMapUseNativeHistograms": true,
+            "tableType": "traces"
           }
         ],
-        "title": "New Panel",
+        "title": "SDK OpenTelemetry",
         "type": "traces"
       },
       {
