@@ -63,9 +63,25 @@
               "type": "tempo",
               "uid": "P214B5B846CF3925F"
             },
+            "filters": [
+              {
+                "id": "fec5eb84",
+                "operator": "=",
+                "scope": "span"
+              },
+              {
+                "id": "service-name",
+                "isCustomValue": false,
+                "operator": "=",
+                "scope": "resource",
+                "tag": "service.name",
+                "value": [],
+                "valueType": "string"
+              }
+            ],
             "limit": 20,
             "metricsQueryType": "range",
-            "query": "bbd762694342c411fe8b2f9d5cf84e61",
+            "query": "fc356b2a857dc29013d97f607067774e",
             "queryType": "traceql",
             "refId": "A",
             "serviceMapUseNativeHistograms": true,
@@ -124,15 +140,13 @@
                 "operator": "=",
                 "scope": "resource",
                 "tag": "service.name",
-                "value": [
-                  "otel-microservice-beyla"
-                ],
+                "value": [],
                 "valueType": "string"
               }
             ],
             "limit": 20,
             "metricsQueryType": "range",
-            "query": "1952f56a6c3c21efbdfc3d8a3d872d5",
+            "query": "e23d265b80e3037613ea9e1e5128f52a",
             "queryType": "traceql",
             "refId": "traceId",
             "serviceMapUseNativeHistograms": true,
@@ -150,8 +164,8 @@
       "list": []
     },
     "time": {
-      "from": "2026-02-19T00:34:57.385Z",
-      "to": "2026-02-19T00:39:57.385Z"
+      "from": "now-10m",
+      "to": "now"
     },
     "timepicker": {},
     "timezone": "browser",
