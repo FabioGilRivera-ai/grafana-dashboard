@@ -36,10 +36,49 @@
           "overrides": []
         },
         "gridPos": {
-          "h": 16,
+          "h": 13,
           "w": 24,
           "x": 0,
           "y": 0
+        },
+        "id": 4,
+        "options": {
+          "spanFilters": {
+            "criticalPathOnly": false,
+            "matchesOnly": false,
+            "serviceNameOperator": "=",
+            "spanNameOperator": "="
+          }
+        },
+        "pluginVersion": "12.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "tempo",
+              "uid": "P214B5B846CF3925F"
+            },
+            "query": "bbd762694342c411fe8b2f9d5cf84e61",
+            "queryType": "traceql",
+            "refId": "A"
+          }
+        ],
+        "title": "New Panel",
+        "type": "traces"
+      },
+      {
+        "datasource": {
+          "type": "tempo",
+          "uid": "P214B5B846CF3925F"
+        },
+        "fieldConfig": {
+          "defaults": {},
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 16,
+          "w": 24,
+          "x": 0,
+          "y": 13
         },
         "id": 3,
         "options": {
@@ -101,8 +140,8 @@
       "list": []
     },
     "time": {
-      "from": "now-30m",
-      "to": "now"
+      "from": "2026-02-19T00:34:57.385Z",
+      "to": "2026-02-19T00:39:57.385Z"
     },
     "timepicker": {},
     "timezone": "browser",
