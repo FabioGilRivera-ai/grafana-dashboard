@@ -89,7 +89,7 @@
         },
         "gridPos": {
           "h": 8,
-          "w": 12,
+          "w": 23,
           "x": 0,
           "y": 0
         },
@@ -113,7 +113,7 @@
             "refId": "A"
           }
         ],
-        "title": "agus test",
+        "title": "agus test2aAS",
         "type": "timeseries"
       }
     ],
